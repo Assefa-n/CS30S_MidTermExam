@@ -96,5 +96,17 @@ public class Employes {
         this.hours = h;
     }//end getHours()
     //*** Others ***
-    
+    /*****************************************
+    * Description: Overide to string
+    * 
+    * Interface:
+    * 
+    * @return       String: employee state
+    * ****************************************/
+    @Override
+    public String toString(){
+        String nl = System.lineSeparator(); 
+        String St = "";
+        return St;
+    }// end toString
 } // end of public class
