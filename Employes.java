@@ -9,9 +9,9 @@
 
 // import libraries as needed here
 
-public class MidtermExam_ClassCode_PartB {
+public class Employes {
     //*** Class Variables ***
-    
+         private static int ID = 1000;
     //*** Instance Variables ***
     
     //*** Constructors ***

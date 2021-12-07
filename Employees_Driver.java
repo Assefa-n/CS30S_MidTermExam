@@ -13,7 +13,7 @@ import java.text.NumberFormat;
  * 
  *************************************************************/
 
-public class ClientTemplate {
+  public class Employees_Driver {
 
     public static void main(String[] args) throws IOException{
     // ***** constants *******
