@@ -32,7 +32,7 @@ import java.util.ArrayList;
         String nl = System.lineSeparator();
     
     // ***** objects *****
-    
+        ArrayList<Employees> Worker = new ArrayList<>();
         //Scanner scanner = new Scanner(System.in);
         //NumberFormat currency = NumberFormat.getCurrencyInstance();
         

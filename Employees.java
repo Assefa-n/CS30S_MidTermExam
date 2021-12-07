@@ -9,7 +9,7 @@
 
 // import libraries as needed here
 
-public class Employes {
+public class Employees {
     //*** Class Variables ***
          private static int NextID = 1000;
     //*** Instance Variables ***
@@ -17,14 +17,14 @@ public class Employes {
          private double paycheck;
          private int id;
     //*** Constructors ***
-    public Employes(){
+    public Employees(){
         id = NextID++; // the Id updating every time
         
         hours = 0;     // the hours an employee works
         paycheck = 0;  // the pay check of an employee depending on hours
     }// end default/no-arg constructor
        
-       public Employes( int h, double p){
+       public Employees( int h, double p){
            id = NextID++; // the Id updating every time
            
            hours = 0;     // the hours an employee works
