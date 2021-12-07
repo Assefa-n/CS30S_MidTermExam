@@ -11,18 +11,22 @@
 
 public class Employes {
     //*** Class Variables ***
-         private static int NextId = 1000;
+         private static int NextID = 1000;
     //*** Instance Variables ***
          private int hours;
          private double paycheck;
          private int id;
     //*** Constructors ***
-       public Workers(){
+       public Employes(){
            id = NextID++;
            
            hours = 0;
            paycheck = 0;
        }// end default/no-arg constructor
+       
+       public Employes( int h, double p){
+           
+       }
     /*****************************************
     * Description: brief description of the methods purpose
     * 
