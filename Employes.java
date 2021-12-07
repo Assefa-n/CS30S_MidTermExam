@@ -62,6 +62,7 @@ public class Employes {
     public double getPay(){
         return paycheck;
     }//end getHours()
+    
     /*****************************************
     * Description: the ID of an Employee
     * 
@@ -74,5 +75,26 @@ public class Employes {
     }//end getHours()
     
     //*** Setters ***
+    /*****************************************
+    * Description: the paycheck of the employee
+    * 
+    * Interface:
+    *
+    * @parm       double: new paycheck for the employee
+    * ****************************************/
+    public void setPay(double p){
+        this.paycheck = p;
+    }//end getHours()
+    /*****************************************
+    * Description: The hours an emoloyee has worked
+    * 
+    * Interface:
+    *
+    * @parm       double: new hours worked for employees
+    * ****************************************/
+    public void setHours(int h){
+        this.hours = h;
+    }//end getHours()
+    //*** Others ***
     
 } // end of public class
