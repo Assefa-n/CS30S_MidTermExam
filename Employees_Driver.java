@@ -2,7 +2,7 @@ import java.util.Scanner;
 import javax.swing.*;
 import java.io.*;
 import java.text.NumberFormat;
-
+import java.util.ArrayList;
 /** ***************************************************
  *  Name:           Naga Assefa
  *  Class:          CS30S
@@ -14,8 +14,7 @@ import java.text.NumberFormat;
  *************************************************************/
 
   public class Employees_Driver {
-
-    public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException{
     // ***** constants *******
     
     // ***** variables *****
@@ -73,6 +72,6 @@ import java.text.NumberFormat;
     
         //fin.close();
         //fout.close();
-    } // end main 
+     } // end main 
     
 } // end FormatTemplate
