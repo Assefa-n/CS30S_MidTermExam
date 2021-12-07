@@ -13,7 +13,8 @@ public class Employes {
     //*** Class Variables ***
          private static int ID = 1000;
     //*** Instance Variables ***
-    
+         private int hours;
+         private double paycheck;
     //*** Constructors ***
     
     /*****************************************
