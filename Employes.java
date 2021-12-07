@@ -17,18 +17,21 @@ public class Employes {
          private double paycheck;
          private int id;
     //*** Constructors ***
-       public Employes(){
-           id = NextID++;
-           
-           hours = 0;
-           paycheck = 0;
-       }// end default/no-arg constructor
+    public Employes(){
+        id = NextID++; // the Id updating every time
+        
+        hours = 0;     // the hours an employee works
+        paycheck = 0;  // the pay check of an employee depending on hours
+    }// end default/no-arg constructor
        
        public Employes( int h, double p){
+           id = NextID++; // the Id updating every time
            
-       }
+           hours = 0;     // the hours an employee works
+           paycheck = 0;  // the pay check of an employee depending on hours
+       }//full arg constructor
     /*****************************************
-    * Description: brief description of the methods purpose
+    * Description: Get employee hours worked
     * 
     * Interface:
     * 
@@ -38,8 +41,37 @@ public class Employes {
     * @return       any return value will be noted here
     * ****************************************/
     
-    
     //*** Getters ***
+    /*****************************************
+    * Description: Get employee hours worked
+    * 
+    * Interface:
+    *
+    * @return       int: hours worked
+    * ****************************************/
+    public int getHours(){
+        return hours;
+    }//end getHours()
+    /*****************************************
+    * Description: the paycheck of an employee
+    * 
+    * Interface:
+    *
+    * @return       double: Paycheck earned
+    * ****************************************/
+    public double getPay(){
+        return paycheck;
+    }//end getHours()
+    /*****************************************
+    * Description: the ID of an Employee
+    * 
+    * Interface:
+    *
+    * @return       int: id number
+    * ****************************************/
+    public int getID(){
+        return id;
+    }//end getHours()
     
     //*** Setters ***
     
