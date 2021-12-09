@@ -111,11 +111,9 @@ public class Employees {
     * //*** Getters ***
     // spetial  'getters'
     * ****************************************/
-    public double  getRegularP(){
-        
-        double extra = 0;     // the amount of non over time 
-        
-        double regpay = 0.0;     // the paycheck given to the employes 
+    public double  getRegularPay(){
+         double extra = 0;     // the amount of non over time 
+         double regpay = 0.0;     // the paycheck given to the employes 
                                  // for working 40 hours
          extra = getHours() - RH;
          regpay = (getHours()-extra) * getPay();
@@ -124,25 +122,42 @@ public class Employees {
     }// end getRP()
     
     /*****************************************
-    * Description: calculate the payccheck for an employe in 
-    *              regulat time
+    * Description: calculate an employees overtime pay
     * 
     * Interface:
     * 
-    * @return       double: regeular pay
+    * @return       double: over time pay
     * //*** Getters ***
     // spetial  'getters'
     * ****************************************/
-    public double  getOvertimeP(){
-        
-        double oth = 0;          // the over time hours
-        double otp = 0;          // the over time pay
-
+    public double  getOvertimePay(){
+        // variables
+         double oth = 0;          // the over time hours
+         double otp = 0;          // the over time pay
+         
+        // calculations
          oth = getHours() - RH;
          otp = oth * getPay() * 1.5;
-         
-         
-        return otp;
+        //return 
+         return otp;
+    }// end getOvertimePay()
+    
+    /*****************************************
+    * Description: calculate the employees total pay 
+    * 
+    * Interface:
+    * 
+    * @return       double: gross pay
+    * //*** Getters ***
+    // spetial  'getters'
+    * ****************************************/
+    public double  getGrosspay(){
+        //variables
+        double gp = 0;          // the total 
+        //calculations 
+        gp = getRegularPay() + getOvertimePay();
+        //return
+        return gp;
     }// end getRP()
     
     /*****************************************
