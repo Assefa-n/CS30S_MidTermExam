@@ -111,7 +111,7 @@ public class Employees {
     * //*** Getters ***
     // spetial  'getters'
     * ****************************************/
-    public double  getRegularPay(){
+    public double  getRegPay(){
          double extra = 0;     // the amount of non over time 
          double regpay = 0.0;     // the paycheck given to the employes 
                                  // for working 40 hours
@@ -130,7 +130,7 @@ public class Employees {
     * //*** Getters ***
     // spetial  'getters'
     * ****************************************/
-    public double  getOvertimePay(){
+    public double  getOtPay(){
         // variables
          double oth = 0;          // the over time hours
          double otp = 0;          // the over time pay
@@ -151,11 +151,11 @@ public class Employees {
     * //*** Getters ***
     // spetial  'getters'
     * ****************************************/
-    public double  getGrosspay(){
+    public double  getGrossPay(){
         //variables
         double gp = 0;          // the total 
         //calculations 
-        gp = getRegularPay() + getOvertimePay();
+        gp = getRegPay() + getOtPay();
         //return
         return gp;
     }// end getRP()
@@ -173,8 +173,11 @@ public class Employees {
         StringBuilder St = new StringBuilder();
         
         St.append(String.format("ID"+ getID()));
-        St.append(String.format( "Hours worked" + getHours()));
-        St.append(String.format( "Hourly wage" + getPay()));    
+        St.append(String.format( "Hours worked: " + getHours()));
+        St.append(String.format( "Hourly wage: " + getPay()));
+        St.append(String.format( "Regular pay: " + getRegPay())); 
+        St.append(String.format( "Overtime pay: " + getOtPay())); 
+        St.append(String.format( "Gross pay: " + getGrossPay())); 
         return St.toString();
     }// end toString
 } // end of public class
