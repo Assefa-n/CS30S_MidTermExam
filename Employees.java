@@ -96,6 +96,9 @@ public class Employees {
         this.hours = h;
     }//end getHours()
     //*** Others ***
+    
+    
+    
     /*****************************************
     * Description: Overide to string
     * 
@@ -106,7 +109,11 @@ public class Employees {
     @Override
     public String toString(){
         String nl = System.lineSeparator(); 
-        String St = "";
-        return St;
+        StringBuilder St = new StringBuilder();
+        
+        St.append(String.format("ID"+ getID()));
+        St.append(String.format( "Hours worked" + getHours()));
+        St.append(String.format( "Hourly wage" + getPay()));    
+        return St.toString();
     }// end toString
 } // end of public class
