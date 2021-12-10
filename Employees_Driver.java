@@ -32,7 +32,7 @@ import java.util.ArrayList;
         String nl = System.lineSeparator();
     
     // ***** objects *****
-        ArrayList<Employees> Worker = new ArrayList<>();
+        ArrayList<Employees> workers = new ArrayList<>();
         
         
         //Scanner scanner = new Scanner(System.in);
@@ -56,17 +56,30 @@ import java.util.ArrayList;
     
     // ***** Get Input *****
     // ***** Main Processing *****
-        Employees worker1 = new Employees(35, 12.50);
-        Employees worker2 = new Employees(40, 17.25);
-        Employees worker3 = new Employees(45, 12.50);
-        Employees worker4 = new Employees(40, 25.00);
-        Employees worker5 = new Employees(46, 20.00);
-        Employees worker6 = new Employees(21, 18.75);
-        Employees worker7 = new Employees(48, 15.50);
-        Employees worker8 = new Employees(40, 32.75);
-        Employees worker9 = new Employees(41, 30.00);
+     // all the workers in the job
+        Employees w1 = new Employees(35, 12.50);
+        Employees w2 = new Employees(40, 17.25);
+        Employees w3 = new Employees(45, 12.50);
+        Employees w4 = new Employees(40, 25.00);
+        Employees w5 = new Employees(46, 20.00);
+        Employees w6 = new Employees(21, 18.75);
+        Employees w7 = new Employees(48, 15.50);
+        Employees w8 = new Employees(40, 32.75);
+        Employees w9 = new Employees(41, 30.00);
+     // loading array list   
+        workers.add(w1);
+        workers.add(w2);
+        workers.add(w3);
+        workers.add(w4);
+        workers.add(w5);
+        workers.add(w6);
+        workers.add(w7);
+        workers.add(w8);
+        workers.add(w9);
+        
+        
     // ***** Print Formatted Output *****
-    
+       
     // ***** Closing Message *****
     
         System.out.println();
