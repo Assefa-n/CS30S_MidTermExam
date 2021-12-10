@@ -9,7 +9,9 @@ import java.util.ArrayList;
  * 
  *  Assignment:     MidtermExam_ClassCode_PartB
  * 
- *  Description:    Place a short description of your program here
+ *  Description:    this class will put the information of workers inside an 
+ *                  array list and print that information and other information 
+ *                  through the array list
  * 
  *************************************************************/
 
@@ -81,10 +83,12 @@ public class EmployeeDriver {
         
             workers.get(5).setHours(50);
             workers.get(5).setWage(50);
-
+            System.out.println("the hours and wage of employee"
+                                +workers.get(5).getID()
+                                +"have been changed to");
             System.out.println( workers.get(5));
+            
             System.out.println("**************************"+nl);
-
             System.out.println( workers.remove(0)+ nl +"This worker will be removed from the list"+nl);
 
             System.out.println("**************************");

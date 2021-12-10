@@ -1,10 +1,12 @@
 /********************************************************************
  * Programmer:    Naga Assefa
+ * 
  * Class:  CS30S
  *
  * Assignment: MidtermExam_ClassCode_PartB
  *
- * Description: brief description of class
+ * Description: Employee class to calculate and print the payrole and 
+ *              Id information of employees 
  ***********************************************************************/
 
 // import libraries as needed here
