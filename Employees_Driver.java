@@ -33,6 +33,8 @@ import java.util.ArrayList;
     
     // ***** objects *****
         ArrayList<Employees> Worker = new ArrayList<>();
+        
+        
         //Scanner scanner = new Scanner(System.in);
         //NumberFormat currency = NumberFormat.getCurrencyInstance();
         
@@ -53,13 +55,16 @@ import java.util.ArrayList;
         //fout.print(banner);
     
     // ***** Get Input *****
-    
-        // prompt for input
-        // read input from keyboard
-        // echo input back to console window
-    
     // ***** Main Processing *****
-    
+        Employees worker1 = new Employees(35, 12.50);
+        Employees worker2 = new Employees(40, 17.25);
+        Employees worker3 = new Employees(45, 12.50);
+        Employees worker4 = new Employees(40, 25.00);
+        Employees worker5 = new Employees(46, 20.00);
+        Employees worker6 = new Employees(21, 18.75);
+        Employees worker7 = new Employees(48, 15.50);
+        Employees worker8 = new Employees(40, 32.75);
+        Employees worker9 = new Employees(41, 30.00);
     // ***** Print Formatted Output *****
     
     // ***** Closing Message *****
