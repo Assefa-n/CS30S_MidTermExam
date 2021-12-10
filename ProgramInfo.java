@@ -15,39 +15,54 @@ public class ProgramInfo {
     
     //*** Instance Variables ***
     
-     private String assignment;               // the name of the assignent for teh banner
+     private String assignment;               // the name of the assignent for the banner
      
     //*** Constructors ***
     
     public ProgramInfo(String a){
         assignment = a;
         
-    }  // end constructor
+    }  // end full arg constructor
     /*****************************************
-    * Description: brief description of the methods purpose
+    * Description: creat the banner information
     * 
     * Interface:
     * 
-    * @param        each parameter of the method should be listed with an @param
-    * @param        parametername description of parameter
-    * 
-    * @return       any return value will be noted here
+    * @return      String: banner info
     * ****************************************/
     
     //*** Getters ***
     // spetial  'getters'
     public String getBanner(){
-       String St;
-       String nl = System.lineSeparator();
-       
-        St = "*****************************" + nl;
-        St += "Name:        Sveinson" + nl;
-        St += "Class:       CS30S" + nl;
-        St += "Assignment:  "+ assignment + nl;
-        St += "*****************************" + nl + nl;
-       return St + assignment;
+        String nl = System.lineSeparator();
+        String ba;
+        
+        ba = "*****************************" + nl;
+        ba += "Name:        Naga Assefa" + nl;
+        ba += "Class:       CS30S" + nl;
+        ba += "Assignment:  "+ assignment + nl;
+        ba += "*****************************" + nl + nl;
+        
+       return ba;
     }// end getBanner()
     
+    /*****************************************
+    * Description: creat the banner information
+    * 
+    * Interface:
+    * 
+    * @return      String: banner info
+    * ****************************************/
+    
+    //*** Getters ***
+    // spetial  'getters'
+    public String getClosingMessage(){
+       String cm;
+       String nl = System.lineSeparator();
+       
+       cm = "end of processing";
+       return cm;
+    }// end getBanner()
     
     //*** Setters ***
     
