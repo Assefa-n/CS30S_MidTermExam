@@ -85,7 +85,7 @@ public class EmployeeDriver {
             workers.get(5).setWage(50);
 
             System.out.println( workers.get(5));
-            System.out.println("**************************"+nl+nl);
+            System.out.println("**************************"+nl);
 
             System.out.println( workers.remove(0)+ "This worker will be removed from the list"+nl);
 

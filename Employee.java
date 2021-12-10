@@ -34,7 +34,18 @@ public class Employee {
         paycheck = p;  // the pay check of an employee depending on hours
     }//full arg constructor
     
+
     //*** Getters ***
+    public String getBanner(String a){
+        String nl = System.lineSeparator(); 
+        String banner;
+        banner = "*****************************" + nl;
+        banner += "Name:        Naga Assefa" + nl;
+        banner += "Class:       CS30S" + nl;
+        banner += "Assignment:  "+a + nl;
+        banner += "*****************************" + nl + nl;
+        return banner;
+    }
     /*****************************************
      * Description: Get employee hours worked
      * 
@@ -174,13 +185,14 @@ public class Employee {
     public String toString(){
         String nl = System.lineSeparator(); 
         StringBuilder St = new StringBuilder();
-
+        
         St.append(String.format("%-2s %d %s", "ID:", this.getID(),nl));
         St.append(String.format("%-2s %d %s", "Hours worked:", this.getHours(),nl));
         St.append(String.format("%-2s %s%.2f %s","Hourly wage:", "$",this.getWage(),nl));
         St.append(String.format("%-2s %s%.2f %s","Regular pay:", "$",this.getRegPay(),nl)); 
         St.append(String.format("%-2s %s%.2f %s","Overtime pay:", "$",this.getOtPay(),nl)); 
         St.append(String.format("%-2s %s%.2f %s","Gross pay:", "$",this.getGrossPay(),nl)); 
+       
         return St.toString();
     }// end toString
 } // end of public class
