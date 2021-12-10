@@ -13,7 +13,7 @@
 
 public class Employee {
     //*** Class Variables ***
-    private static int NextID = 1000;
+    private static int NextID = 1000;   // the Id that is diffrent for every imployee
     
     // ***Constants******
     private final int RH = 40;          //the amount of ours there are in regular pay
@@ -46,7 +46,7 @@ public class Employee {
      * 
      * Interface:
      *
-     * @return       int: hours worked
+     * @return       double: hours worked
      * ****************************************/
      public double getHours(){
         return hours;
@@ -98,7 +98,6 @@ public class Employee {
     }//end getHours()
     //*** Others ***
     
-    
     /*****************************************
      * Description: calculate the paycheck for an employe in 
      *              regulate time
@@ -106,8 +105,6 @@ public class Employee {
      * Interface:
      * 
      * @return       double: regeular pay
-     * //*** Getters ***
-    // spetial  'getters'
      * ****************************************/
      public double  getRegPay(){
         // variables
@@ -131,8 +128,6 @@ public class Employee {
      * Interface:
      * 
      * @return       double: over time pay
-     * //*** Getters ***
-    // spetial  'getters'
      * ****************************************/
      public double  getOtPay(){
         // variables
@@ -157,8 +152,6 @@ public class Employee {
      * Interface:
      * 
      * @return       double: gross pay
-     * //*** Getters ***
-    // spetial  'getters'
      * ****************************************/
      public double  getGrossPay(){
         //variables

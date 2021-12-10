@@ -45,11 +45,9 @@ public class EmployeeDriver {
 
         // ***** print banners *****
 
-        ProgramInfo pf = new ProgramInfo("MidtermExam Q2");
+        ProgramInfo pf = new ProgramInfo("MidtermExam Q2"); //the banner and closing message info
+                                                            
         System.out.println(pf.getBanner());
-
-        System.out.println(banner);
-        //fout.print(banner);
 
         // ***** Get Input *****
         // ***** Main Processing *****
