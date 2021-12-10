@@ -103,15 +103,19 @@ public class Employees {
      * ****************************************/
     public double  getRegPay(){
         // variables
-        double extra = 0;        // the amount of non over time 
-        double regpay = 0.0;     // the paycheck given to the employes 
+         double extra = 0;        // the amount of non over time 
+         double regpay = 0.0;     // the paycheck given to the employes 
         // for working 40 hours
         // calculations                         
-        extra = getHours() - RH;
-        regpay = (getHours()-extra) * getPay();
-
+         extra = getHours() - RH;
+         if(extra < 0){
+         regpay = getHours() * getPay();
+        }//end if
+        else{
+         regpay = (getHours()-extra) * getPay();
+        }//end else
         //return 
-        return regpay;
+         return regpay;
     }// end getRP()
 
     /*****************************************
