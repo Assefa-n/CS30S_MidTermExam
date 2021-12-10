@@ -14,8 +14,9 @@ public class Employee {
     private static int NextID = 1000;
     
     // ***Constants******
-    private final int RH = 40;    //the amount of ours there are in regular pay
-
+    private final int RH = 40;          //the amount of ours there are in regular pay
+    private final double OTR = 1.5;  // the over time rate for employees
+    
     //*** Instance Variables ***
     private int hours;            // the hours an employee has worked
     private double paycheck;      // the hourly wage of an employee
@@ -159,7 +160,8 @@ public class Employee {
         if(oth < 0){
         otp = 0;
        }//end if
-         otp = oth * getWage() * 1.5;
+         otp = oth * getWage() * OTR;
+         
         //return 
         return otp;
     }// end getOtPay()
