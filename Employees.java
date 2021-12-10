@@ -30,8 +30,8 @@ public class Employees {
     public Employees( int h, double p){
         id = NextID++; // the Id updating every time
 
-        hours = 0;     // the hours an employee works
-        paycheck = 0;  // the pay check of an employee depending on hours
+        hours = h;     // the hours an employee works
+        paycheck = p;  // the pay check of an employee depending on hours
     }//full arg constructor
     
     //*** Getters ***
