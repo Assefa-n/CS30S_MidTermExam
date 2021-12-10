@@ -130,7 +130,12 @@ public class Employees {
 
         // calculations
         oth = getHours() - RH;
+        if(oth >= 0){
         otp = oth * getPay() * 1.5;
+      }//end if
+        else{
+        otp = 0;
+        }//end else
         //return 
         return otp;
     }// end getOvertimePay()
