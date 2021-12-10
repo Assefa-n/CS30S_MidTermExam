@@ -95,25 +95,7 @@ public class Employee {
         this.hours = h;
     }//end getHours()
     //*** Others ***
-    /*****************************************
-     * Description: The banner information for the assignment
-     * 
-     * Interface:
-     * 
-     * @return       String: get banner info
-     * //*** Getters ***
-    // spetial  'getters'
-     * ****************************************/
-     public String getBanner(String a){
-        String nl = System.lineSeparator(); 
-        String banner;
-        banner = "*****************************" + nl;
-        banner += "Name:        Naga Assefa" + nl;
-        banner += "Class:       CS30S" + nl;
-        banner += "Assignment:  "+a + nl;
-        banner += "*****************************" + nl + nl;
-        return banner;
-    }// end get banner
+    
     
     /*****************************************
      * Description: calculate the paycheck for an employe in 
@@ -127,7 +109,7 @@ public class Employee {
      * ****************************************/
      public double  getRegPay(){
         // variables
-         double extra = 0;        // the amount of non over time 
+         double extra = 0;        // the amount of non regular time in hours
          double regpay = 0.0;     // the paycheck given to the employes 
                                   // for working 40 hours
         // calculations                         
@@ -157,10 +139,11 @@ public class Employee {
 
         // calculations
         oth = getHours() - RH;
+        
         if(oth < 0){
         oth = 0;
        }//end if
-         otp = oth * getWage() * OTR;
+        otp = oth * getWage() * OTR;
          
         //return 
         return otp;
