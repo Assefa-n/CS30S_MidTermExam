@@ -43,8 +43,8 @@ public class EmployeeDriver {
 
         // ***** print banners *****
 
-        ProgramInfo bann = new ProgramInfo("MidtermExam Q2");
-        System.out.println(bann.getBanner());
+        ProgramInfo pf = new ProgramInfo("MidtermExam Q2");
+        System.out.println(pf.getBanner());
 
         System.out.println(banner);
         //fout.print(banner);
@@ -98,7 +98,7 @@ public class EmployeeDriver {
         // ***** Closing Message *****
 
             System.out.println();
-            System.out.println("end of processing");
+            System.out.println(pf.getClosingMessage());
         //fout.println("End of Processing");
 
         // **** close io buffers *****
