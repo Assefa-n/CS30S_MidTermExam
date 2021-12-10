@@ -158,7 +158,7 @@ public class Employee {
         // calculations
         oth = getHours() - RH;
         if(oth < 0){
-        otp = 0;
+        oth = 0;
        }//end if
          otp = oth * getWage() * OTR;
          
