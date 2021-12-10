@@ -46,7 +46,7 @@ public class Employee {
      *
      * @return       int: hours worked
      * ****************************************/
-     public int getHours(){
+     public double getHours(){
         return hours;
     }//end getHours()
 
@@ -197,7 +197,7 @@ public class Employee {
         StringBuilder St = new StringBuilder();
         
         St.append(String.format("%-2s %d %s", "ID:", this.getID(),nl));
-        St.append(String.format("%-2s %d %s", "Hours worked:", this.getHours(),nl));
+        St.append(String.format("%-2s %.0f %s", "Hours worked:", this.getHours(),nl));
         St.append(String.format("%-2s %s%.2f %s","Hourly wage:", "$",this.getWage(),nl));
         St.append(String.format("%-2s %s%.2f %s","Regular pay:", "$",this.getRegPay(),nl)); 
         St.append(String.format("%-2s %s%.2f %s","Overtime pay:", "$",this.getOtPay(),nl)); 
