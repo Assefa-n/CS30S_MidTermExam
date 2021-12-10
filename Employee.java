@@ -12,13 +12,15 @@
 public class Employee {
     //*** Class Variables ***
     private static int NextID = 1000;
+    
     // ***Constants******
     private final int RH = 40;    //the amount of ours there are in regular pay
 
     //*** Instance Variables ***
-    private int hours;
-    private double paycheck;
-    private int id;
+    private int hours;            // the hours an employee has worked
+    private double paycheck;      // the hourly wage of an employee
+    private int id;               // the ID of an employee
+    
     //*** Constructors ***
     public Employee(){
         id = NextID++; // the Id updating every time
@@ -34,18 +36,8 @@ public class Employee {
         paycheck = p;  // the pay check of an employee depending on hours
     }//full arg constructor
     
-
     //*** Getters ***
-    public String getBanner(String a){
-        String nl = System.lineSeparator(); 
-        String banner;
-        banner = "*****************************" + nl;
-        banner += "Name:        Naga Assefa" + nl;
-        banner += "Class:       CS30S" + nl;
-        banner += "Assignment:  "+a + nl;
-        banner += "*****************************" + nl + nl;
-        return banner;
-    }
+    
     /*****************************************
      * Description: Get employee hours worked
      * 
@@ -53,7 +45,7 @@ public class Employee {
      *
      * @return       int: hours worked
      * ****************************************/
-    public int getHours(){
+     public int getHours(){
         return hours;
     }//end getHours()
 
@@ -103,8 +95,28 @@ public class Employee {
     }//end getHours()
     //*** Others ***
     /*****************************************
-     * Description: calculate the payccheck for an employe in 
-     *              regulat time
+     * Description: The banner information for the assignment
+     * 
+     * Interface:
+     * 
+     * @return       String: get banner info
+     * //*** Getters ***
+    // spetial  'getters'
+     * ****************************************/
+     public String getBanner(String a){
+        String nl = System.lineSeparator(); 
+        String banner;
+        banner = "*****************************" + nl;
+        banner += "Name:        Naga Assefa" + nl;
+        banner += "Class:       CS30S" + nl;
+        banner += "Assignment:  "+a + nl;
+        banner += "*****************************" + nl + nl;
+        return banner;
+    }// end get banner
+    
+    /*****************************************
+     * Description: calculate the paycheck for an employe in 
+     *              regulate time
      * 
      * Interface:
      * 
@@ -112,19 +124,18 @@ public class Employee {
      * //*** Getters ***
     // spetial  'getters'
      * ****************************************/
-    public double  getRegPay(){
+     public double  getRegPay(){
         // variables
          double extra = 0;        // the amount of non over time 
          double regpay = 0.0;     // the paycheck given to the employes 
-        // for working 40 hours
+                                  // for working 40 hours
         // calculations                         
          extra = getHours() - RH;
          if(extra < 0){
-         regpay = getHours() * getWage();
+         extra = 0;
         }//end if
-         else{
          regpay = (getHours()-extra) * getWage();
-        }//end else
+         
         //return 
          return regpay;
     }// end getRP()
@@ -138,23 +149,20 @@ public class Employee {
      * //*** Getters ***
     // spetial  'getters'
      * ****************************************/
-    public double  getOtPay(){
+     public double  getOtPay(){
         // variables
         double oth = 0;          // the over time hours
         double otp = 0;          // the over time pay
 
         // calculations
         oth = getHours() - RH;
-        if(oth >= 0){
-        otp = oth * getWage() * 1.5;
-       }//end if
-        else{
+        if(oth < 0){
         otp = 0;
-       }//end else
-       
+       }//end if
+         otp = oth * getWage() * 1.5;
         //return 
         return otp;
-    }// end getOvertimePay()
+    }// end getOtPay()
 
     /*****************************************
      * Description: calculate the employees total pay 
@@ -165,14 +173,14 @@ public class Employee {
      * //*** Getters ***
     // spetial  'getters'
      * ****************************************/
-    public double  getGrossPay(){
+     public double  getGrossPay(){
         //variables
         double gp = 0;          // the total 
         //calculations 
         gp = getRegPay() + getOtPay();
         //return
         return gp;
-    }// end getRP()
+    }// end getGrossPay()
 
     /*****************************************
      * Description: Overide to string
@@ -181,9 +189,9 @@ public class Employee {
      * 
      * @return       String: employee state
      * ****************************************/
-    @Override
-    public String toString(){
-        String nl = System.lineSeparator(); 
+     @Override
+      public String toString(){
+        String nl = System.lineSeparator();         // the line separator    
         StringBuilder St = new StringBuilder();
         
         St.append(String.format("%-2s %d %s", "ID:", this.getID(),nl));

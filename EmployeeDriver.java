@@ -61,6 +61,7 @@ public class EmployeeDriver {
             Employee w7 = new Employee(48, 15.50);
             Employee w8 = new Employee(40, 32.75);
             Employee w9 = new Employee(41, 30.00);
+            
         // loading array list   
             workers.add(w1);
             workers.add(w2);
@@ -84,7 +85,7 @@ public class EmployeeDriver {
             System.out.println( workers.get(5));
             System.out.println("**************************"+nl);
 
-            System.out.println( workers.remove(0)+ "This worker will be removed from the list"+nl);
+            System.out.println( workers.remove(0)+ nl +"This worker will be removed from the list"+nl);
 
             System.out.println("**************************");
          for(Employee e: workers){
