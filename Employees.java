@@ -13,7 +13,7 @@ public class Employees {
     //*** Class Variables ***
     private static int NextID = 1000;
     // ***Constants******
-    private final double RH = 40;    //the amount of ours there are in regular pay
+    private final int RH = 40;    //the amount of ours there are in regular pay
 
     //*** Instance Variables ***
     private int hours;
@@ -53,7 +53,7 @@ public class Employees {
      *
      * @return       double: Paycheck earned
      * ****************************************/
-    public double getPay(){
+    public double getWage(){
         return paycheck;
     } //end getHours()
 
@@ -109,10 +109,10 @@ public class Employees {
         // calculations                         
          extra = getHours() - RH;
          if(extra < 0){
-         regpay = getHours() * getPay();
+         regpay = getHours() * getWage();
         }//end if
-        else{
-         regpay = (getHours()-extra) * getPay();
+         else{
+         regpay = (getHours()-extra) * getWage();
         }//end else
         //return 
          return regpay;
@@ -135,11 +135,12 @@ public class Employees {
         // calculations
         oth = getHours() - RH;
         if(oth >= 0){
-        otp = oth * getPay() * 1.5;
-      }//end if
+        otp = oth * getWage() * 1.5;
+       }//end if
         else{
         otp = 0;
-        }//end else
+       }//end else
+       
         //return 
         return otp;
     }// end getOvertimePay()
@@ -174,12 +175,12 @@ public class Employees {
         String nl = System.lineSeparator(); 
         StringBuilder St = new StringBuilder();
 
-        St.append(String.format("ID: "+ getID()+nl));
-        St.append(String.format( "Hours worked: " + getHours()+nl));
-        St.append(String.format( "Hourly wage: $" + getPay()+nl));
-        St.append(String.format( "Regular pay: $" + getRegPay()+nl)); 
-        St.append(String.format( "Overtime pay: $" + getOtPay()+nl)); 
-        St.append(String.format( "Gross pay: $" + getGrossPay()+nl)); 
+        St.append(String.format("%-2s %d %s", "ID: ", this.getID(),nl));
+        St.append(String.format("%-2s %d %s", "Hours worked: ", this.getHours(),nl));
+        St.append(String.format("%-10s %10.3f %s","Hourly wage: $", this.getWage()+nl));
+        //St.append(String.format("%-10s %10.3f%s","Regular pay: $", this.getRegPay()+nl)); 
+        //St.append(String.format("%-10s %10.3f%s","Overtime pay: $", this.getOtPay()+nl)); 
+        //St.append(String.format("%-10s %10.3f%s","Gross pay: $", this.getGrossPay()+nl)); 
         return St.toString();
     }// end toString
 } // end of public class
