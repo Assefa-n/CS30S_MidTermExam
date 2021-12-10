@@ -33,17 +33,7 @@ public class Employees {
         hours = 0;     // the hours an employee works
         paycheck = 0;  // the pay check of an employee depending on hours
     }//full arg constructor
-    /*****************************************
-     * Description: Get employee hours worked
-     * 
-     * Interface:
-     * 
-     * @param        each parameter of the method should be listed with an @param
-     * @param        parametername description of parameter
-     * 
-     * @return       any return value will be noted here
-     * ****************************************/
-
+    
     //*** Getters ***
     /*****************************************
      * Description: Get employee hours worked
@@ -65,7 +55,7 @@ public class Employees {
      * ****************************************/
     public double getPay(){
         return paycheck;
-    }//end getHours()
+    } //end getHours()
 
     /*****************************************
      * Description: the ID of an Employee
@@ -175,12 +165,12 @@ public class Employees {
         String nl = System.lineSeparator(); 
         StringBuilder St = new StringBuilder();
 
-        St.append(String.format("ID"+ getID()));
-        St.append(String.format( "Hours worked: " + getHours()));
-        St.append(String.format( "Hourly wage: " + getPay()));
-        St.append(String.format( "Regular pay: " + getRegPay())); 
-        St.append(String.format( "Overtime pay: " + getOtPay())); 
-        St.append(String.format( "Gross pay: " + getGrossPay())); 
+        St.append(String.format("ID: "+ getID()+nl));
+        St.append(String.format( "Hours worked: " + getHours()+nl));
+        St.append(String.format( "Hourly wage: " + getPay()+nl));
+        St.append(String.format( "Regular pay: " + getRegPay()+nl)); 
+        St.append(String.format( "Overtime pay: " + getOtPay()+nl)); 
+        St.append(String.format( "Gross pay: " + getGrossPay()+nl)); 
         return St.toString();
     }// end toString
 } // end of public class
