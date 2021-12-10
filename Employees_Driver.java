@@ -76,8 +76,12 @@ import java.util.ArrayList;
         workers.add(w7);
         workers.add(w8);
         workers.add(w9);
-        
-        
+      
+        System.out.println("**************************");
+        for(Employees e: workers){
+            System.out.println(e);
+        }// end for each loop
+        System.out.println("**************************");
     // ***** Print Formatted Output *****
        
     // ***** Closing Message *****
