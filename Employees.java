@@ -176,11 +176,11 @@ public class Employees {
         StringBuilder St = new StringBuilder();
 
         St.append(String.format("%-2s %d %s", "ID: ", this.getID(),nl));
-        St.append(String.format("%-2s %d %s", "Hours worked: ", this.getHours(),nl));
-        St.append(String.format("%-10s %10.3f %s","Hourly wage: $", this.getWage()+nl));
-        //St.append(String.format("%-10s %10.3f%s","Regular pay: $", this.getRegPay()+nl)); 
-        //St.append(String.format("%-10s %10.3f%s","Overtime pay: $", this.getOtPay()+nl)); 
-        //St.append(String.format("%-10s %10.3f%s","Gross pay: $", this.getGrossPay()+nl)); 
+        St.append(String.format("%-2s %d %s", "Hours worked: ",this.getHours(),nl));
+        St.append(String.format("%-2s %s %-5.2f %s","Hourly wage: ","$",this.getWage(),nl));
+        St.append(String.format("%-2s %s %s %-5.2f %s","Regular pay: ","$",this.getRegPay(),nl)); 
+        St.append(String.format("%-2s %s %-5.2f %s","Overtime pay: ","$",this.getOtPay(),nl)); 
+        St.append(String.format("%-2s %s %-5.2f %s","Gross pay: ","$",this.getGrossPay(),nl)); 
         return St.toString();
     }// end toString
 } // end of public class
