@@ -9,7 +9,7 @@
 
 // import libraries as needed here
 
-public class Employees {
+public class Employee {
     //*** Class Variables ***
     private static int NextID = 1000;
     // ***Constants******
@@ -20,14 +20,14 @@ public class Employees {
     private double paycheck;
     private int id;
     //*** Constructors ***
-    public Employees(){
+    public Employee(){
         id = NextID++; // the Id updating every time
 
         hours = 0;     // the hours an employee works
         paycheck = 0;  // the pay check of an employee depending on hours
     }// end default/no-arg constructor
 
-    public Employees( int h, double p){
+    public Employee( int h, double p){
         id = NextID++; // the Id updating every time
 
         hours = h;     // the hours an employee works
@@ -76,7 +76,7 @@ public class Employees {
      *
      * @parm       double: new paycheck for the employee
      * ****************************************/
-    public void setPay(double p){
+    public void setWage(double p){
         this.paycheck = p;
     }//end getHours()
 
@@ -85,7 +85,7 @@ public class Employees {
      * 
      * Interface:
      *
-     * @parm       double: new hours worked for employees
+     * @parm       double: new hours worked for Employees
      * ****************************************/
     public void setHours(int h){
         this.hours = h;

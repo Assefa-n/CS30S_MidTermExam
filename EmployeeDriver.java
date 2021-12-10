@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * 
  *************************************************************/
 
-  public class Employees_Driver {
+  public class EmployeeDriver {
   public static void main(String[] args) throws IOException{
     // ***** constants *******
     
@@ -32,7 +32,7 @@ import java.util.ArrayList;
         String nl = System.lineSeparator();
     
     // ***** objects *****
-        ArrayList<Employees> workers = new ArrayList<>();
+        ArrayList<Employee> workers = new ArrayList<>();
         
         
         //Scanner scanner = new Scanner(System.in);
@@ -57,15 +57,15 @@ import java.util.ArrayList;
     // ***** Get Input *****
     // ***** Main Processing *****
      // all the workers in the job
-        Employees w1 = new Employees(35, 12.50);
-        Employees w2 = new Employees(40, 17.25);
-        Employees w3 = new Employees(45, 12.50);
-        Employees w4 = new Employees(40, 25.00);
-        Employees w5 = new Employees(46, 20.00);
-        Employees w6 = new Employees(21, 18.75);
-        Employees w7 = new Employees(48, 15.50);
-        Employees w8 = new Employees(40, 32.75);
-        Employees w9 = new Employees(41, 30.00);
+        Employee w1 = new Employee(35, 12.50);
+        Employee w2 = new Employee(40, 17.25);
+        Employee w3 = new Employee(45, 12.50);
+        Employee w4 = new Employee(40, 25.00);
+        Employee w5 = new Employee(46, 20.00);
+        Employee w6 = new Employee(21, 18.75);
+        Employee w7 = new Employee(48, 15.50);
+        Employee w8 = new Employee(40, 32.75);
+        Employee w9 = new Employee(41, 30.00);
      // loading array list   
         workers.add(w1);
         workers.add(w2);
@@ -78,10 +78,18 @@ import java.util.ArrayList;
         workers.add(w9);
       
         System.out.println("**************************");
-        for(Employees e: workers){
+        for(Employee e: workers){
             System.out.println(e);
         }// end for each loop
         System.out.println("**************************");
+        
+        workers.get(5).setHours(50);
+        workers.get(5).setWage(50);
+        
+        System.out.println( workers.get(5));
+        System.out.println("**************************"+nl);
+        
+        
     // ***** Print Formatted Output *****
        
     // ***** Closing Message *****
