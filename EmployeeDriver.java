@@ -43,11 +43,8 @@ public class EmployeeDriver {
 
         // ***** print banners *****
 
-        banner = "*****************************" + nl;
-        banner += "Name:        Naga Assefa" + nl;
-        banner += "Class:       CS30S" + nl;
-        banner += "Assignment:  Midterm Exam2 Q2" + nl;
-        banner += "*****************************" + nl + nl;
+        Employee bann = new Employee();
+        System.out.println(bann.getBanner("MidtermExam Q2"));
 
         System.out.println(banner);
         //fout.print(banner);
