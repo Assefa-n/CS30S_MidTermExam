@@ -167,10 +167,10 @@ public class Employees {
 
         St.append(String.format("ID: "+ getID()+nl));
         St.append(String.format( "Hours worked: " + getHours()+nl));
-        St.append(String.format( "Hourly wage: " + getPay()+nl));
-        St.append(String.format( "Regular pay: " + getRegPay()+nl)); 
-        St.append(String.format( "Overtime pay: " + getOtPay()+nl)); 
-        St.append(String.format( "Gross pay: " + getGrossPay()+nl)); 
+        St.append(String.format( "Hourly wage: $" + getPay()+nl));
+        St.append(String.format( "Regular pay: $" + getRegPay()+nl)); 
+        St.append(String.format( "Overtime pay: $" + getOtPay()+nl)); 
+        St.append(String.format( "Gross pay: $" + getGrossPay()+nl)); 
         return St.toString();
     }// end toString
 } // end of public class
